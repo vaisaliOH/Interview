@@ -10,11 +10,14 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        'https://interview-d45g.onrender.com/api/auth/login',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await res.json();
 
@@ -35,7 +38,9 @@ const Login = () => {
         onSubmit={handleLogin}
         className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold mb-6 text-blue-700 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-blue-700 text-center">
+          Login
+        </h2>
 
         <input
           type="email"
