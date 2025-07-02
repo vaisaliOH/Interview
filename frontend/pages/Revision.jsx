@@ -108,7 +108,7 @@ const Revision = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const res = await fetch("http://localhost:5000/api/questions");
+      const res = await fetch("https://interview-d45g.onrender.com/api/questions");
       const data = await res.json();
       setOriginalQuestions(data);
       setQuestions(shuffleArray(data));

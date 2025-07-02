@@ -15,7 +15,7 @@ const AddQuestion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/questions', {
+      await axios.post('https://interview-d45g.onrender.com/api/questions', {
         question,
         company,
         difficulty,

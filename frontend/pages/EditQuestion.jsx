@@ -37,7 +37,7 @@ const EditQuestion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/questions/${id}`, formData)
+      .put(`https://interview-d45g.onrender.com/api/questions/${id}`, formData)
       .then(() => {
         navigate("/view"); // Redirect to home
       })

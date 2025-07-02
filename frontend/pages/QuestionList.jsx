@@ -33,7 +33,7 @@ const QuestionList = () => {
 
   const fetchQuestions = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/questions");
+      const res = await axios.get("https://interview-d45g.onrender.com/api/questions");
       setQuestions(res.data);
     } catch (err) {
       console.error("Error fetching questions:", err);
@@ -42,7 +42,7 @@ const QuestionList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/questions/${id}`);
+      await axios.delete(`https://interview-d45g.onrender.com/api/questions/${id}`);
       setQuestions((prev) => prev.filter((q) => q._id !== id));
     } catch (err) {
       console.error("Error deleting question:", err);
