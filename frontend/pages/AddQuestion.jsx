@@ -23,7 +23,7 @@ const AddQuestion = () => {
         status,
         notes,
       });
-      navigate('/');
+      navigate('/home');
     } catch (err) {
       console.error(err);
       alert('Failed to add question');
