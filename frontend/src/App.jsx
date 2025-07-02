@@ -44,7 +44,7 @@ function App() {
           />
           <Route
             path="/add"
-            element={isAuthenticated() ? <AddQuestion /> : <Navigate to="/" />}
+            element={isAuthenticated() ? <AddQuestion /> : <Navigate to="/home" />}
           />
           <Route
             path="/view"
