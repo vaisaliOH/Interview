@@ -44,27 +44,27 @@ function App() {
           />
           <Route
             path="/add"
-            element={isAuthenticated() ? <AddQuestion /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <AddQuestion /> : <Navigate to="/" />}
           />
           <Route
             path="/view"
-            element={isAuthenticated() ? <QuestionList /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <QuestionList /> : <Navigate to="/view" />}
           />
           <Route
             path="/edit/:id"
-            element={isAuthenticated() ? <EditQuestion /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <EditQuestion /> : <Navigate to="/home" />}
           />
           <Route
             path="/analytics"
-            element={isAuthenticated() ? <Analytics /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <Analytics /> : <Navigate to="/analytics" />}
           />
           <Route
             path="/revision"
-            element={isAuthenticated() ? <Revision /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <Revision /> : <Navigate to="/revision" />}
           />
           <Route
             path="/company-test"
-            element={isAuthenticated() ? <CompanyTest /> : <Navigate to="/login" />}
+            element={isAuthenticated() ? <CompanyTest /> : <Navigate to="/company-test" />}
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
